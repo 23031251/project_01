@@ -1,4 +1,4 @@
-# version 1.0.3.
+# version 1.2.7.
 # -*- coding: utf-8 -*-
 
 # Псевдокод - неформальная запись алгоритма
@@ -23,4 +23,5 @@
 Иначе
     Закончить поиск
 
-# extra paragraph included here... waiting...
+# added another line
+# added second line
