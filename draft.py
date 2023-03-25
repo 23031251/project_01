@@ -8,14 +8,17 @@ stroka = '2, 3, 5, 7, 11, 13'
 # print(len(spisok))
 # spisok.append(15)
 a = [50, 60]
-# spisok.append(a)
 # print(spisok)
 b = '2slovo'
 # spisok.extend(b)
 # print(spisok)
-# s
-# spisok.extend(b)
+# spisok.append(b)
+# spisok.extend(a)
 # spisok.extend(c)
 # spisok.insert(0, a)
-spisok[-2] = 20
-print(spisok)
+# spisok[-2] = 20
+# spisok.remove(2)
+# del spisok[1:3]
+del stroka[1:3]
+# print(spisok)
+print(stroka)
