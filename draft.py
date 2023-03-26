@@ -36,5 +36,5 @@ stroka *= 2
 # print(list(range(5, 160, 10)))
 # print(list(range(0, 5)))
 # print(list(spisok2))
-x = (1, 2, 3, 4, 5)
-print(list(x))
+# x = (1, 2, 3, 4, 5)
+# print(list(x))
