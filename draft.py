@@ -9,9 +9,9 @@ matrica = [ [4,5] , [7,9] ]
 # print(spisok[::-1])
 # print(len(spisok))
 # spisok.append(15)
-a = [50, 60]
-# print(spisok)
-b = '2slovo'
+# a = [50, 60]
+# # print(spisok)
+# b = '2slovo'
 # spisok.extend(b)
 # print(stroka)
 # spisok.append(b)
@@ -42,13 +42,27 @@ stroka *= 2
 # '::'.join(spisok4)
 # print('::'.join(spisok4))
 import copy
-spisok5 = copy.deepcopy(spisok3)
-print('spisok5 is spisok3: ', spisok5 is spisok3)
-print('spisok5 == spisok3: ', spisok5 == spisok3)
-print('id(spisok5): ', id(spisok5)) 
-print('id(spisok3): ', id(spisok3))
+# spisok5 = copy.deepcopy(spisok3)
+# print('spisok5 is spisok3: ', spisok5 is spisok3)
+# print('spisok5 == spisok3: ', spisok5 == spisok3)
+# print('id(spisok5): ', id(spisok5)) 
+# print('id(spisok3): ', id(spisok3))
 # print(spisok5 is spisok3)
 # print(spisok5 == spisok3)
 # print(id(spisok5)) 
 # print(id(spisok3))
 # print(spisok5 is spisok)
+# dog_name = 'Жужа'
+# pet_name = dog_name.replace('Ж', 'П')
+# print('', dog_name,'\n',pet_name)
+# a = 5
+# b = 8
+# a, b = b, a
+# print('a: ', a, ';  b: ', b)
+vocabulary = { 'а' : ('ананас', 'апельсин', 'арбуз'),
+'б' : ('баклажан','батат', 'брюква') }
+book = vocabulary
+book['в'] = ('виноград')
+print(vocabulary,'\n',book)
+# print(vocabulary.get('Италия', 'Отсутствует'))
+vocabulary.setdefault('Италия')
