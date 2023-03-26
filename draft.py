@@ -1,4 +1,5 @@
-spisok = [2, 3, 5, 7, 11, 13]
+spisok = [2, 13, 5, 7, 11, 13]
+spisok4 = ['a', 'b', 'v', 'g', 'd']
 stroka = '2, 3, 5, 7, 11, 13'
 matrica = [ [4,5] , [7,9] ]
 # print(spisok[-1])
@@ -12,7 +13,7 @@ a = [50, 60]
 # print(spisok)
 b = '2slovo'
 # spisok.extend(b)
-# print(spisok)
+# print(stroka)
 # spisok.append(b)
 # spisok.extend(a)
 # spisok.extend(c)
@@ -35,6 +36,19 @@ stroka *= 2
 # print(list('abcdefg'))
 # print(list(range(5, 160, 10)))
 # print(list(range(0, 5)))
-# print(list(spisok2))
+# print(spisok == [4, 3, 5, 7, 11, 13])
 # x = (1, 2, 3, 4, 5)
 # print(list(x))
+# '::'.join(spisok4)
+# print('::'.join(spisok4))
+import copy
+spisok5 = copy.deepcopy(spisok3)
+print('spisok5 is spisok3: ', spisok5 is spisok3)
+print('spisok5 == spisok3: ', spisok5 == spisok3)
+print('id(spisok5): ', id(spisok5)) 
+print('id(spisok3): ', id(spisok3))
+# print(spisok5 is spisok3)
+# print(spisok5 == spisok3)
+# print(id(spisok5)) 
+# print(id(spisok3))
+# print(spisok5 is spisok)
