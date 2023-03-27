@@ -59,10 +59,28 @@ import copy
 # b = 8
 # a, b = b, a
 # print('a: ', a, ';  b: ', b)
-vocabulary = { 'а' : ('ананас', 'апельсин', 'арбуз'),
-'б' : ('баклажан','батат', 'брюква') }
-book = vocabulary
-book['в'] = ('виноград')
-print(vocabulary,'\n',book)
-# print(vocabulary.get('Италия', 'Отсутствует'))
-vocabulary.setdefault('Италия')
+# vocabulary = { 'а' : ('ананас', 'апельсин', 'арбуз'),
+# 'б' : ('баклажан','батат', 'брюква') }
+# book = vocabulary
+# book['в'] = ('виноград')
+# print(vocabulary,'\n',book)
+# # print(vocabulary.get('Италия', 'Отсутствует'))
+# vocabulary.setdefault('Италия')
+# C = {10, 20, 30, 40}
+# D = C
+# D.update({50, 60})
+# print(C,'\n',D)
+# movie_list = ['Челюсти', 'Касабланка', 'Оно']
+# if movie_list:
+#     print('Успех')
+# x = -1
+# print('Здравствуйте!')
+# if x < 0:
+#     print('Меньше нуля')
+# else:
+#         print('Больше нуля')
+# print('До свидания!')
+i = 0
+while i < 5:
+    print(i)
+    i += 1
