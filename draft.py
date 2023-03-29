@@ -81,6 +81,18 @@ import copy
 #         print('Больше нуля')
 # print('До свидания!')
 i = 0
-while i < 5:
-    print(i)
-    i += 1
+# while i < 5:
+#     print(i)
+#     i += 1
+import pprint
+# fib1, fib2 = 1, 1
+# n = input('Номер элемента ряда Фибоначчи: ')
+# n = int(n)
+# i = 0
+# while i < n-2:
+#     print(fib2)
+#     next_fib2 = fib1 + fib2
+#     next_fib1 = fib2
+#     fib1, fib2 = next_fib1, next_fib2
+#     i += 1
+# print('Значение этого элемента: ', fib2)
