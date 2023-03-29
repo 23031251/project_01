@@ -80,7 +80,7 @@ import copy
 # else:
 #         print('Больше нуля')
 # print('До свидания!')
-i = 0
+# i = 0
 # while i < 5:
 #     print(i)
 #     i += 1
