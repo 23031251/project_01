@@ -96,3 +96,13 @@ import pprint
 #     fib1, fib2 = next_fib1, next_fib2
 #     i += 1
 # print('Значение этого элемента: ', fib2)
+# for number in [0, 1, 2, 3, 4]:
+#     print(number)
+# a_dict = {"one":1, "two":2, "three":3}
+# for key in a_dict:
+#     print(key)
+# a_dict = {3:"three", 2:"two", 1:"one"}
+# keys = a_dict.keys()
+# # keys = sorted(keys)
+# for key in keys:
+#     print(key)
