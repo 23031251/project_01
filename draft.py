@@ -219,3 +219,88 @@
 # sugar_dose = int(input('Введите количество сахара: '))
 # print(make_coffee(size, sugar_dose))
 # 
+# def trapezoid_s(a,b,h):
+#     return h*(a+b)/2
+# # param_lst = [2, 3, 4]
+# param_dict = {'b': 8, 'h': 4, 'a': 10}
+# # S = trapezoid_s(8,4,10)
+# # S = trapezoid_s(b=8,h=4,a=10)
+# S = trapezoid_s(** param_dict)
+# print(S)
+# 
+# varOne = 1
+# varTwo = 2
+# print(varOne and varTwo)
+# 
+# var = 5
+# print(type(type(var)))
+# 
+# var = 'Индексация строк в Python!'
+# print(var[3::-1])
+# 
+# lst = [2, 3, 4]
+# num = '1'
+# for i in lst:
+#     num = num + i
+# print(num)
+# 
+# lst = [-2, -1, 0, 1, 2]
+# def func(x):
+#     return x < 1
+# rst = filter(func, lst)
+# print(list(rst))
+# 
+# import pandas as pd
+# import numpy as np
+# s = pd.Series(np.random.randn (5), index = ['a', 'b', 'c', 'd', 'e']),
+# print(pd.__version __)
+# 
+import pandas as pd
+import numpy as np
+
+# s = pd.Series(np.random.randn(5), index = ['a', 'b', 'c', 'd', 'e'])
+# print (s)
+# print (s['a'])
+
+# import pandas as pd
+# import numpy as np
+# #print(pd.__version__)
+# df = pd.DataFrame(np.random.randn(5,3),
+# index = pd.date_range ('1/1/2023', periods = 5),
+# columns = ['test', 'test1', 'C'])
+
+# print(df)
+# df.describe()
+
+# import pandas as pd
+# import numpy as np
+
+# xl = pd.read_excel("data.xlsx", sheet_name = 'Sheet1')
+# print(xl.columns)
+
+# import pandas as pd
+# import numpy as np
+# s = pd.Series([1, 2, 3, 4, 5])
+# s = s.replace(1,3)
+# print(s)
+
+# df = pd.DataFrame ({'A': [0, 1, 2, 3, 4],
+# 'B': [5, 6, 7, 8, 9],
+# 'C': ['a', 'b', 'c', 'd', 'e']})
+# df = df.replace('a', 5)
+# print(df)
+# df.to_csv('test.csv')
+
+# import pandas as pd
+# import numpy as np
+
+# xl = pd.read_excel("data.xlsx", sheet_name = 'Sheet1')
+
+
+# kiwi = xl[xl['sku'] == 'Киви']
+# kiwi2 = xl[xl['sku'] == 'Киви']
+
+# kiwi2 = kiwi[kiwi['priceoforder'] > 1000]
+# print (kiwi2)
+# kiwi2.to_excel('task2.xlsx')
+
