@@ -6,6 +6,9 @@ my_favorite_songs = 'Waste a Moment, Staying\' Alive, A Sorta Fairytale, Start M
 
 # Выведите на консоль с помощью индексации строки, последовательно: первый трек, последний, второй, второй с конца
 # Нельзя переопределять my_favorite_songs и запятая не должна выводиться.
+
+
+# Решение
 phrase_to_list = my_favorite_songs.split(', ')
 print(phrase_to_list[0])
 print(phrase_to_list[-1])
