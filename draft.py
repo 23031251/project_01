@@ -303,4 +303,89 @@ import numpy as np
 # kiwi2 = kiwi[kiwi['priceoforder'] > 1000]
 # print (kiwi2)
 # kiwi2.to_excel('task2.xlsx')
+# 
+# import sqlite3
+# import pandas as pd
+# connection = sqlite3.connect('Students.db')
+# cursor = connection.cursor()
+# query = """SELECT * FROM Students;"""
+# cursor.execute(query)
+# records = cursor.fetchall()
+# print(records)
+# df = pd.read_sql("SELECT * FROM Students;", connection)
+# connection.close()
+# print (df)
+# df.to_excel('test1.xlsx', index = False)
+# ошибки
+# import sqlite3
+# import pandas as pd
+# connection = sqlite3.connect('Students.db')
+# cursor = connection.cursor()
+# query = """SELECT * FROM Students;"""
+# cursor.execute(query)
+# records = cursor.fetchall()
+# print(records)
+# df = pd.read_sql("SELECT * FROM Students;", connection)
+# df_newstd = pd.DataFrame({
+#     "Student_id":[205,206,207],
+#     "Student_name":["Ирина","Ксения","Жанна"]
+#     })
+# df_newstd.to_sql("Students", con = connection, if_exists = "append", index = False)
+# df_newstd.to_excel('task2.xlsx', index = False)
+# 
+# import sqlite3
+# import pandas as pd
+# connection = sqlite3.connect('Students.db')
+# df = pd.read_sql("SELECT * FROM Students;", connection)
+# df.to_sql("Students", con = connection, if_exists = "append", index = False)
+# df = pd.DataFrame ({
+#   "Student_id":[208,209,210],
+#   "Student_name": ["Ирина","Ксения","Жанна"],
+#   "School_Id": [1,2,3]
+#   })
+# df.to_excel('Taskuch2.xlsx', index = False)
+# 
+# import numpy as np
+# x = np.matrix('9 8 7; 6 5 4; 3 2 1')
+# print(x[0, 2])
+# x.tolist()
+# import numpy as np
+# x = np.diag([16, 5, 8, 10, 9, 1])
+# print(x)
+# np.savetxt('task4.csv', x, delimiter=',', fmt ='%s')
+# 
+# import numpy as np
+# x = np.arange(1, 17).reshape((4, 4))
+# print(x)
+# 
 
+# import numpy as np
+# x = np.array([1, 2, 3, 4])
+# print("Входящий массив:")
+# print(x)
+# print("Проверка на наличие элемента со значением 0")
+# print(np.all(x))
+# x = np.array([0, 1, 2, 3])
+# print("Входящий массив:")
+# print(x)
+# print("Проверка на наличие элемента со значением 0:")
+# print(np.all(x))
+# 
+# import numpy as np
+# x = np.arange(0,49).reshape((7,7))
+# print (np. sum (x, axis= 0))
+# print (np. sum (x, axis= 1))
+# print (np. sum (x))
+# np.savetxt('task6.csv', x, delimiter=',', fmt ='%s')
+# 
+# import numpy as np
+# x = np.random.randint(low = 10, high = 40, size =6)
+# xmin, xmax = x.min(), x.max()
+# print(x)
+# print(xmin, xmax)
+# 
+import numpy as np
+x = np.random.randint((5, 5))
+xmin, xmax = x.min(), x.max()
+print(x)
+print(xmin, xmax)
