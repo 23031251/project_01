@@ -399,7 +399,7 @@
 # reviews = pandas.read_csv(f'{os.getcwd()}\winemag-data_first150k.csv.gz', compression='gzip')
 # reviews.head()
 import random
-from datetime import timedelta
+# --- from datetime import timedelta
 import datetime
 
 my_favorite_songs = [
@@ -413,7 +413,6 @@ my_favorite_songs = [
     ['Nowhere to Run', 2.58],
     ['In This World', 4.02],
 ]
-
 
 selection = random.sample(my_favorite_songs, k=3)
 print(selection)

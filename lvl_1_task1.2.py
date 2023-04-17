@@ -21,7 +21,6 @@
 # Решение А
 import random
 import datetime
-
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
     ['New Salvation', 4.02],
