@@ -255,8 +255,8 @@
 # s = pd.Series(np.random.randn (5), index = ['a', 'b', 'c', 'd', 'e']),
 # print(pd.__version __)
 # 
-import pandas as pd
-import numpy as np
+# import pandas as pd
+# import numpy as np
 
 # s = pd.Series(np.random.randn(5), index = ['a', 'b', 'c', 'd', 'e'])
 # print (s)
@@ -384,8 +384,76 @@ import numpy as np
 # print(x)
 # print(xmin, xmax)
 # 
-import numpy as np
-x = np.random.randint((5, 5))
-xmin, xmax = x.min(), x.max()
-print(x)
-print(xmin, xmax)
+# import numpy as np
+# x = np.random.randint((5, 5))
+# xmin, xmax = x.min(), x.max()
+# print(x)
+# print(xmin, xmax)
+# 
+# import random
+# print(random.randint(0, 5))
+# import pandas 
+# import matplotlib
+# import seaborn
+# import os
+# reviews = pandas.read_csv(f'{os.getcwd()}\winemag-data_first150k.csv.gz', compression='gzip')
+# reviews.head()
+import random
+from datetime import timedelta
+import datetime
+
+my_favorite_songs = [
+    ['Waste a Moment', 3.03],
+    ['New Salvation', 4.02],
+    ['Staying\' Alive', 3.40],
+    ['Out of Touch', 3.03],
+    ['A Sorta Fairytale', 5.28],
+    ['Easy', 4.15],
+    ['Beautiful Day', 4.04],
+    ['Nowhere to Run', 2.58],
+    ['In This World', 4.02],
+]
+
+
+selection = random.sample(my_favorite_songs, k=3)
+print(selection)
+print("Три песни: ", selection[0][0], ", ", selection[1][0], ", ", selection[2][0])
+# --- duration = selection[0][1] + selection[1][1] + selection[2][1]
+# ??? print (f"Три песни звучат ", duration, " минут" )
+# --- d = timedelta(my_favorite_songs[2][1] + my_favorite_songs[4][1])
+# --- print(f"Проверка корректности сложения 3.40+5.28=", d)
+# print(my_favorite_songs[0][1]+ my_favorite_songs[1][1])
+# Три песни звучат ХХХ минут
+# import random
+# test_list = [1, 2, 'в', 'г', 'д', 'е']
+# choice = random.sample(test_list, 3)
+# print(choice)
+
+
+timeList = [selection[0][1], selection[1][1], selection[2][1]]
+# print(timeList)
+duration_m_s = datetime.timedelta()
+for p in timeList:
+    p = str(p)
+    (m, s) = p.split('.')
+    d = datetime.timedelta(minutes=int(m), seconds=int(s))
+    # d_m = datetime.timedelta(minutes=int(m))
+    duration_m_s += d
+    # duration_m += d_m
+    # dd = 
+print(str(duration_m_s))
+hms = str(duration_m_s)
+# print("hms: ", hms)
+hh, mm, ss = hms.split(':')
+hhh = int(hh)
+mmm = int(mm)
+# print("hhh+1: ", hhh+1)
+# print(hh, mm, ss * 4)
+duration_m = hhh * 60 + mmm
+# print("duration_m: ", duration_m)
+# --- duration_m = datetime.timedelta()
+
+# --- d_s = datetime.timedelta(minutes=int(m), seconds=int(s))
+# hours, minutes, seconds = timedelta_to_hms(duration_m_s)
+# print(f'{hours} hours, {minutes} minutes')
+print (f"Три песни звучат ", duration_m, " минут" )
