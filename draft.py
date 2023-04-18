@@ -466,84 +466,108 @@
 # Есть словарь песен 
 # Распечатайте общее время звучания трех случайных песен
 # Вывод: Три песни звучат ХХХ минут.
-import random
-import datetime
-my_favorite_songs_dict = {
-    'Waste a Moment': 3.03,
-    'New Salvation': 4.02,
-    'Staying\' Alive': 3.40,
-    'Out of Touch': 3.03,
-    'A Sorta Fairytale': 5.28,
-    'Easy': 4.15,
-    'Beautiful Day': 4.04,
-    'Nowhere to Run': 2.58,
-    'In This World': 4.02,
-}
-d = my_favorite_songs_dict
-# print(my_favorite_songs_dict)
-# dicttolist = list(my_favorite_songs_dict)
-# selection = random.choice(list(my_favorite_songs_dict))
-# print(dicttolist)
-# # selection = my_favorite_songs_dict['New Salvation']
-# # selection = random.sample(my_favorite_songs_dict, k=3)
-# print(selection)
-# print("Три песни: ", selection[0][0], ", ", selection[1][0], ", ", selection[2][0])
-# timeList = [selection[0][1], selection[1][1], selection[2][1]]
-# print(timeList)
+# import random
+# import datetime
+# my_favorite_songs_dict = {
+#     'Waste a Moment': 3.03,
+#     'New Salvation': 4.02,
+#     'Staying\' Alive': 3.40,
+#     'Out of Touch': 3.03,
+#     'A Sorta Fairytale': 5.28,
+#     'Easy': 4.15,
+#     'Beautiful Day': 4.04,
+#     'Nowhere to Run': 2.58,
+#     'In This World': 4.02,
+# }
+# d = my_favorite_songs_dict
+# # print(my_favorite_songs_dict)
+# # dicttolist = list(my_favorite_songs_dict)
+# # selection = random.choice(list(my_favorite_songs_dict))
+# # print(dicttolist)
+# # # selection = my_favorite_songs_dict['New Salvation']
+# # # selection = random.sample(my_favorite_songs_dict, k=3)
+# # print(selection)
+# # print("Три песни: ", selection[0][0], ", ", selection[1][0], ", ", selection[2][0])
+# # timeList = [selection[0][1], selection[1][1], selection[2][1]]
+# # print(timeList)
+# # duration_m_s = datetime.timedelta()
+# # for p in timeList:
+# #     p = str(p)
+# #     (m, s) = p.split('.')
+# #     d = datetime.timedelta(minutes=int(m), seconds=int(s))
+# #     # d_m = datetime.timedelta(minutes=int(m))
+# #     duration_m_s += d
+# #     # duration_m += d_m
+# #     # dd = 
+# # print(str(duration_m_s))
+# # hms = str(duration_m_s)
+# # # print("hms: ", hms)
+# # hh, mm, ss = hms.split(':')
+# # hhh = int(hh)
+# # mmm = int(mm)
+# # # print("hhh+1: ", hhh+1)
+# # # print(hh, mm, ss * 4)
+# # duration_m = hhh * 60 + mmm
+# # # print("duration_m: ", duration_m)
+# # # --- duration_m = datetime.timedelta()
+
+# # # --- d_s = datetime.timedelta(minutes=int(m), seconds=int(s))
+# # # hours, minutes, seconds = timedelta_to_hms(duration_m_s)
+# # # print(f'{hours} hours, {minutes} minutes')
+# # print (f"Три песни звучат ", duration_m, " минут" )
+# # print(my_favorite_songs_dict.get()) 
+# # print(my_favorite_songs_dict.keys())
+# # print(my_favorite_songs_dict.values())
+# # print(my_favorite_songs_dict.items())
+# my_favorite_songs = list(my_favorite_songs_dict)    #.keys())
+# # ww = w.split(',', -1)
+# print(my_favorite_songs)
+# # u = random.choices(my_favorite_songs_dict, weights=None, *, cum_weights=None, k=3)
+# # random.choice(d.keys())
+# # print(u)
+# # print(type(my_favorite_songs_dict))
+# # ww = w(10;-1)
+
+# selection = random.sample(my_favorite_songs, k=3)
+# print("Три песни к прослушиванию: ", selection)
 # duration_m_s = datetime.timedelta()
-# for p in timeList:
-#     p = str(p)
+# for g in selection:
+#     p = str(my_favorite_songs_dict[g])
 #     (m, s) = p.split('.')
 #     d = datetime.timedelta(minutes=int(m), seconds=int(s))
-#     # d_m = datetime.timedelta(minutes=int(m))
 #     duration_m_s += d
-#     # duration_m += d_m
-#     # dd = 
-# print(str(duration_m_s))
+#     # print(d)
+# # print(duration_m_s)
+# # --- print(str(duration_m_s))
 # hms = str(duration_m_s)
 # # print("hms: ", hms)
 # hh, mm, ss = hms.split(':')
 # hhh = int(hh)
 # mmm = int(mm)
-# # print("hhh+1: ", hhh+1)
-# # print(hh, mm, ss * 4)
 # duration_m = hhh * 60 + mmm
 # # print("duration_m: ", duration_m)
-# # --- duration_m = datetime.timedelta()
+# print (f"Три песни звучат", duration_m, "минут" )
+# 
+dict = {
+1: 'январь. 31 день',
+2: 'февраль. 28 дней',
+3: 'март. 31 день',
+4: 'апрель. 30 дней',
+5: 'май. 31 день',
+6: 'июнь. 30 дней',
+7: 'июль. 31 день',
+8: 'август. 31 день',
+9: 'сентябрь. 30 дней',
+10: 'октябрь. 31 день',
+11: 'ноябрь. 30 дней',
+12: 'декабрь. 31 день', 
+}
 
-# # --- d_s = datetime.timedelta(minutes=int(m), seconds=int(s))
-# # hours, minutes, seconds = timedelta_to_hms(duration_m_s)
-# # print(f'{hours} hours, {minutes} minutes')
-# print (f"Три песни звучат ", duration_m, " минут" )
-# print(my_favorite_songs_dict.get()) 
-# print(my_favorite_songs_dict.keys())
-# print(my_favorite_songs_dict.values())
-# print(my_favorite_songs_dict.items())
-my_favorite_songs = list(my_favorite_songs_dict)    #.keys())
-# ww = w.split(',', -1)
-print(my_favorite_songs)
-# u = random.choices(my_favorite_songs_dict, weights=None, *, cum_weights=None, k=3)
-# random.choice(d.keys())
-# print(u)
-# print(type(my_favorite_songs_dict))
-# ww = w(10;-1)
-
-selection = random.sample(my_favorite_songs, k=3)
-print("Три песни к прослушиванию: ", selection)
-duration_m_s = datetime.timedelta()
-for g in selection:
-    p = str(my_favorite_songs_dict[g])
-    (m, s) = p.split('.')
-    d = datetime.timedelta(minutes=int(m), seconds=int(s))
-    duration_m_s += d
-    # print(d)
-# print(duration_m_s)
-# --- print(str(duration_m_s))
-hms = str(duration_m_s)
-# print("hms: ", hms)
-hh, mm, ss = hms.split(':')
-hhh = int(hh)
-mmm = int(mm)
-duration_m = hhh * 60 + mmm
-# print("duration_m: ", duration_m)
-print (f"Три песни звучат", duration_m, "минут" )
+n = input("Введите номер месяца: ")
+# print(type(n))
+m = int(n)
+# print(m)
+if 1 <= m <= 12:
+    print("Вы ввели", dict[m])
+else: 
+    print("Такого месяца нет!")
