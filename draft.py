@@ -548,26 +548,120 @@
 # # print("duration_m: ", duration_m)
 # print (f"Три песни звучат", duration_m, "минут" )
 # 
-dict = {
-1: 'январь. 31 день',
-2: 'февраль. 28 дней',
-3: 'март. 31 день',
-4: 'апрель. 30 дней',
-5: 'май. 31 день',
-6: 'июнь. 30 дней',
-7: 'июль. 31 день',
-8: 'август. 31 день',
-9: 'сентябрь. 30 дней',
-10: 'октябрь. 31 день',
-11: 'ноябрь. 30 дней',
-12: 'декабрь. 31 день', 
+# dict = {
+# 1: 'январь. 31 день',
+# 2: 'февраль. 28 дней',
+# 3: 'март. 31 день',
+# 4: 'апрель. 30 дней',
+# 5: 'май. 31 день',
+# 6: 'июнь. 30 дней',
+# 7: 'июль. 31 день',
+# 8: 'август. 31 день',
+# 9: 'сентябрь. 30 дней',
+# 10: 'октябрь. 31 день',
+# 11: 'ноябрь. 30 дней',
+# 12: 'декабрь. 31 день', 
+# }
+
+# n = input("Введите номер месяца: ")
+# # print(type(n))
+# m = int(n)
+# # print(m)
+# if 1 <= m <= 12:
+#     print("Вы ввели", dict[m])
+# else: 
+#     print("Такого месяца нет!")
+# 
+# Задача 1.4.
+
+# Есть словарь кодов товаров titles
+
+titles = {
+    'Кроссовки тип 3 (Adidas)': '100000110',
+    'Мячик тип 2 (Adidas)': '100000146',
+    'Кепка тип 1 (Adidas)': '100000149',
+    'Ремень тип 2 (Nike)': '100000194',
+    'Футболка тип 1 (Adidas)': '100000224',
+    'Шапка тип 5 (Puma)': '100000280',
 }
 
-n = input("Введите номер месяца: ")
-# print(type(n))
-m = int(n)
-# print(m)
-if 1 <= m <= 12:
-    print("Вы ввели", dict[m])
-else: 
-    print("Такого месяца нет!")
+# Товары находятся на складе и сохранены в виде словаря списков словарей,
+# которые отражают количество товаров в магазине по каждому коду.
+
+store = {
+    '100000110': [{'quantity': 31, 'price': 1637}],
+    '100000146': [ {'quantity': 4, 'price': 45}, {'quantity': 10, 'price': 48}],
+    '100000149': [ {'quantity': 28, 'price': 279}, {'quantity': 32, 'price': 291}],
+    '100000194': [{'quantity': 8, 'price': 220}, {'quantity': 1, 'price': 170}],
+    '100000224': [{'quantity': 61, 'price': 438}, {'quantity': 23, 'price': 302},  {'quantity': 50, 'price': 412}],
+    '100000280': [{'quantity': 26, 'price': 175}, ]
+}
+
+# Рассчитайте на какую сумму лежит каждого товара на складе.
+#
+# Вывести суммарную стоимость каждого товара в магазине в формате:
+# "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
+
+# Пример: "Кроссовки тип 3 (Adidas) - 31 шт, стоимость 50747 руб"
+
+# d = {}
+# for x in store:
+#      q, p = x['quantity'], x['price']
+#      d[c] = store.get(q, 0) * store.get(p, 0)
+# print(d)
+
+
+# test = {'quantity': 31, 'price': 1637}
+# print(test.values())
+
+# +++ print(store['100000149'][1])
+# +++ print(store['100000149'])
+# ,,, print(type(store['100000149'])) #<class 'list'>
+# print(store['100000149'][1].get('quantity'), store['100000149'][1].get('price'))
+# print(store['100000149'][1].get())  # TypeError: get expected at least 1 argument, got 0
+# --- print(store['100000149'][1].values('quantity'))  # TypeError: dict.values() takes no arguments (1 given)
+# print(store['100000149'].values())  #AttributeError: 'list' object has no attribute 'values'
+# s = store['100000224'] #[1]
+# ,,, print(type(s))  #<class 'dict'>
+# print(s)    #{'quantity': 32, 'price': 291}
+# +++ s2 = store['100000149']
+# +++ print(s2[1])    #{'quantity': 32, 'price': 291}
+# import collections
+# d = collections.defaultdict(int)
+cc = 0
+# print(len(titles))
+for name, code in titles.items():       #               обработка первого источника
+    # --- name, code = titles.items()
+    # print('name, code=', name, code)
+    s = store[code] 
+    c = 0
+    r = 0
+    qq = 0
+    for k in range(len(s)):         #                   проход по списку линии второго источника
+        
+        
+        # print('c=', c)
+    # for i in list1:
+    # d[k['quantity']] += k['price']
+    # o = s[k]
+    # print(o)
+    # q, p = o.get('quantity'), o.get('price')
+    # q, p = s[k].get('quantity'), s[k].get('price')
+    #                                               внутри линейного словаря
+        q = s[k].get('quantity')
+        # print('q=', q)
+        r = s[k].get('quantity') * s[k].get('price')
+        # print('r =', r)
+
+        c += r         # начало набора стоимости линии
+
+        qq += q              # начало набора количества линии
+        # print('q=', q)
+        # print('qq=', qq)
+        # print('конец итерации внутри линейного словаря')
+    # print('q, p =', q, p) #+++
+    # print('r =', r)
+    print('"', name, ' - ', qq, ', стоимость ', c, ' руб"')
+    # print('конец итерациивнутри линейного линии')
+    cc += c
+print('На складе товаров на', cc, 'рублей')
