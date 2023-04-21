@@ -58,6 +58,6 @@ for name, code in titles.items():
         r = s[k].get('quantity') * s[k].get('price')
         c += r
         qq += q 
-    print('"', name, ' - ', qq, ', стоимость ', c, ' руб"')
+    print('"', name, ' - ', qq, 'шт, стоимость ', c, ' руб"')
     cc += c
 print('На складе товаров на', cc, 'рублей')
