@@ -676,35 +676,35 @@
 # * [-52, 56, 30, 29, -54, 0, -110] -> min = -110, max = 56
 # * [42, 54, 65, 87, 0]             -> min = 0, max = 87
 # * [5]                             -> min = 5, max = 5
-# функции max и min использовать нельзя!
-import random
-base0 = list(range(-20, 20, 2))
-print(base0)
-# list = [20, 30, 40, 50 ,60, 70, 80, 90]
-a = random.choices(base0, k=10)
+# # функции max и min использовать нельзя!
+# import random
+# base0 = list(range(-20, 20, 2))
+# print(base0)
+# # list = [20, 30, 40, 50 ,60, 70, 80, 90]
+# a = random.choices(base0, k=10)
  
-print("Произвольный список: ", a)
+# print("Произвольный список: ", a)
 
 # a = [4, 6, 2, 1, 9, 63, -134, 566]
-arr = [14, 16, 12, 11, 19, 163, -1134, 1566]
+# arr = [14, 16, 12, 11, 19, 163, -1134, 1566]
 # +++ arr.sort() 
 # +++ print(arr)
-def minimum(arr):
-    arr.sort()  
-    m = arr[0]
-    return m
+# def minimum(arr):
+#     arr.sort()  
+#     m = arr[0]
+#     return m
+#     # pass
+# def maximum(arr):
+#     arr.sort()  
+#     b = arr[-1]
+#     return b
     # pass
-def maximum(arr):
-    arr.sort()  
-    b = arr[-1]
-    return b
-    # pass
-minimum(a)
+# minimum(a)
 # print(a[0])
 # b = minimum(a)
-maximum(a)
-print('minimum(a)=', minimum(a))
-print('maximum(a)=', maximum(a))
+# maximum(a)
+# print('minimum(a)=', minimum(a))
+# print('maximum(a)=', maximum(a))
 # a.sort()
 # print('min=', b)
 # print('min=', a)
@@ -717,3 +717,86 @@ print('maximum(a)=', maximum(a))
 # < spisok.sort()
 # < print(spisok)
 # > [2, 5, 7, 11, 13, 13]
+# salary = input('Введите зарплату ')
+# expenses = input('Введите расходы ')
+
+# x = int(salary)
+# y = int(expenses)
+# n = 12
+
+# if y>=x:
+#     print('Неверные данные')
+# else:
+#     p=[]
+#     i=1
+#     for i in range(n):
+#         i += i
+#         x = 1.05 * x
+#         p.append(x)
+#     sum(p)
+
+# print('Сотрудник накопит ', '%.2f' % (sum(p) - n * y), ' руб')
+# 
+# Задача 2.2. 
+
+# Напишите функцию, которая возвращает номер квартал по номеру месяца
+# Например: 
+# месяц 2 (февраль) является частью первого квартала; 
+# месяц 6 (июнь) является частью второго квартала; 
+# месяц 11 (ноябрь) является частью четвертого квартала.
+opis_mes = {
+    1: 'месяц 1 (январь)',
+    2: 'месяц 2 (февраль)',
+    3: 'месяц 3 (март)',
+    4: 'месяц 4 (апрель)',
+    5: 'месяц 5 (май)',
+    6: 'месяц 6 (июнь)',
+    7: 'месяц 7 (июль)',
+    8: 'месяц 8 (август)',
+    9: 'месяц 9 (сентябрь)',
+    10: 'месяц 10 (октябрь)',
+    11: 'месяц 11 (ноябрь)',
+    12: 'месяц 12 (декабрь)'    
+}
+opis_kvart = {
+    1: 'является частью первого квартала',
+    2: 'является частью второго квартала',
+    3: 'является частью третьего квартала',
+    4: 'является частью четвертого квартала'
+}
+
+# k = 1
+def quarter_of(month):
+    k = 1
+    while k in range(1, 5):
+        # k = p
+        if month - (3 * k) <= 0:
+            print('chekpoint', k)
+            print('K=', k)
+            return k
+            # break
+        else:
+            k += 1
+            print('chekpoint', k)
+    # return k
+x = int(input('Введите номер месяца:'))
+try:
+    1 <= x <= 12
+except KeyError:
+    print('Введите номер месяца от 1 до 12')
+quarter_of(x)
+print(opis_mes[x], opis_kvart[quarter_of(x)])
+# print(opis_mes[1])
+
+# исключения по вводу не доделал
+# x = int(input('Введите номер месяца:'))
+# try:
+#     1 <= x <= 12
+#     print('Норма')
+# # except:
+#     # print('Нужен номер месяца')
+# except ValueError:
+#     print('Это не число. Выходим.')
+# except Exception:
+#     print('Это что ещё такое?')
+    # 
