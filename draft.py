@@ -801,37 +801,139 @@
 #     print('Это что ещё такое?')
     # 
 # Задача 2.3.
-opis_cifr = {
-    0: 'ноль',
-    1: 'один',
-    2: 'два',
-    3: 'три',
-    4: 'чертыре',
-    5: 'пять',
-    6: 'шесть',
-    7: 'семь',
-    8: 'восемь',
-    9: 'девять'
-}
-x = int
-a = int(input(' Введи делимое:'))
-b = int(input(' Введи делитель:'))
-try:
-    a = int
-    b = int
-    y = a / b
-    print('a=', a)
-    print('b=', b)
-    print('y=', y)
-    x in (range(0, 9))
-except ValueError:
-    print('Что-то не то ввели')
-
+# opis_cifr = {
+#     0: 'ноль',
+#     1: 'один',
+#     2: 'два',
+#     3: 'три',
+#     4: 'чертыре',
+#     5: 'пять',
+#     6: 'шесть',
+#     7: 'семь',
+#     8: 'восемь',
+#     9: 'девять'
+# }
+# x = int
+# a = int(input(' Введи делимое:'))
+# b = int(input(' Введи делитель:'))
+# try:
+#     a = int
+#     b = int
+#     y = a / b
+#     print('a=', a)
+#     print('b=', b)
+#     print('y=', y)
+#     x in (range(0, 9))
+# except ValueError:
+#     print('Что-то не то ввели')
 # except ZeroDivisionError:
 #     print('Ошибка! Деление на 0')
-def switch_it_up(number):
-    number = int(input('Введите цифру:'))
-    return number
-# switch_it_up(x)
-# quarter_of(x)
-print(opis_cifr.get(switch_it_up(x)))
+# def switch_it_up(number):
+#     number = int(input('Введите цифру:'))
+#     return number
+# # switch_it_up(x)
+# # quarter_of(x)
+# print(opis_cifr.get(switch_it_up(x)))
+# 
+# Задача 2.4.
+
+# Пункт A.
+# Напишите функцию, которая удаляет все восклицательные знаки из заданной строк.
+# Например,
+# foo("Hi! Hello!") -> "Hi Hello"
+# foo("") -> ""
+# foo("Oh, no!!!") -> "Oh, no"
+
+# source_string = str
+# def remove_exclamation_marks(s):
+#     s = input('Введите строку с восклицательным знаком или нажмите ввод') or '!!!test!!!'
+#     if s == '!!!test!!!': 
+#         print('Тестовый исходник: !!!test!!!')
+#     s = s.replace('!', '')
+#     return s
+# print('Очищенная строка:', remove_exclamation_marks(source_string))
+
+# string = input('Введите строку с восклицательным знаком или нажмите ввод') or '!!!test!!!'
+# if string == '!!!test!!!': 
+#     print('Тестовый исходник: !!!test!!!')
+# # string = "Hi! Hello!"
+# # print(len(string))
+# string = string.replace('!', '')
+# print('Очищенная строка:', string)
+# # for p in range(0, len(string))
+#     # string.replace('!', '')
+
+
+
+# Пункт B.
+# Удалите восклицательный знак из конца строки. 
+# remove("Hi!") == "Hi"
+# remove("Hi!!!") == "Hi!!"
+# remove("!Hi") == "!Hi"
+
+# def remove_last_em(s):
+#     pass
+
+# Решение
+# source_string = str
+# def remove_last_em(s):
+#     s = input('Введите строку с восклицательным знаком или нажмите ввод: ') or '!!!test!!!'
+#     if s == '!!!test!!!': 
+#         print('Тестовый исходник: !!!test!!!')
+#     s = s[:-1]
+#     return s
+# print('Очищенная строка:', remove_last_em(source_string))
+
+# Дополнительно
+
+# Пункт С.
+# Удалите слова из предложения, если они содержат ровно один восклицательный знак.
+# Слова разделены одним пробелом.
+# Например,
+# remove("Hi!") === ""
+# remove("Hi! Hi!") === ""
+# remove("Hi! Hi! Hi!") === ""
+# remove("Hi Hi! Hi!") === "Hi"
+# remove("Hi! !Hi Hi!") === ""
+# remove("Hi! Hi!! Hi!") === "Hi!!"
+# remove("Hi! !Hi! Hi!") === "!Hi!"
+
+# source_string = str
+# def remove_word_with_one_em(s):
+#     s = input('Введите строку, содержащую слова как с восклицательным знаком так и без. Если лень, нажмите ввод: ') or 'Hi! !Hi! Hi'
+#     if s == 'Hi! !Hi! Hi': 
+#         print('Тестовый исходник: Hi! !Hi! Hi')   
+#     # s = s[:-1]
+#     spisok = s.split()
+#     print('исходный список: ', spisok)
+#     for p in (len(spisok)):
+#         print('длинна элемента', len(spisok(p)))
+#     return s
+# print('Очищенная строка:', remove_word_with_one_em(source_string))
+
+source_string = str
+def remove_word_with_one_em(s):
+    s = input('Введите строку, содержащую слова как с восклицательным знаком так и без. Если лень, нажмите ввод: ') or 'раз! два!! три!!! !четыре!!! раз! два!!'
+    if s == 'раз! два!! три!!! !четыре!!! раз! два!!': 
+        print('Тестовый исходник: Hi! !Hi! Hi')   
+        # s = s[:-1]
+    spisok = s.split()
+    nakopitel = str()
+    print('исходный список: ', spisok)
+    n = 0
+    for p in spisok:
+        a = len(p)
+        print('начальная длина строчного элемента', n, ': ', a)
+        p = p.replace('!', '')
+        b = len(p)
+        print('итоговая длина строчного элемента', n, ': ', b)
+        if a == b + 1:
+            spisok.pop(n)
+        n += 1
+        # print('nakopitel: ', nakopitel)
+    # print('длинна списка', n) 
+    print('len(spisok)=', len(spisok))
+    print('spisok=', spisok)
+    s = ' '.join(spisok) # --- ' '.join(str(c) for с in spisok)
+    return s
+print('Очищенная строка:', remove_word_with_one_em(source_string))

@@ -1,31 +1,45 @@
-#  Решение
-opis_mes = {
-    1: 'месяц 1 (январь)',
-    2: 'месяц 2 (февраль)',
-    3: 'месяц 3 (март)',
-    4: 'месяц 4 (апрель)',
-    5: 'месяц 5 (май)',
-    6: 'месяц 6 (июнь)',
-    7: 'месяц 7 (июль)',
-    8: 'месяц 8 (август)',
-    9: 'месяц 9 (сентябрь)',
-    10: 'месяц 10 (октябрь)',
-    11: 'месяц 11 (ноябрь)',
-    12: 'месяц 12 (декабрь)'    
-}
-opis_kvart = {
-    1: 'является частью первого квартала',
-    2: 'является частью второго квартала',
-    3: 'является частью третьего квартала',
-    4: 'является частью четвертого квартала'
-}
-def quarter_of(month):
-    k = 1
-    while k in range(1, 5):
-        if month - (3 * k) <= 0:
-            return k
-        else:
-            k += 1
-x = int(input('Введите номер месяца:'))
-quarter_of(x)
-print(opis_mes[x], opis_kvart[quarter_of(x)])
+# Задача 2.4.
+
+# Пункт A. Решение
+source_string = str
+def remove_exclamation_marks(s):
+    s = input('Введите строку с восклицательным знаком или нажмите ввод: ') or '!!!test!!!'
+    if s == '!!!test!!!': 
+        print('Тестовый исходник: !!!test!!!')
+    s = s.replace('!', '')
+    return s
+print('Очищенная строка:', remove_exclamation_marks(source_string))
+
+# Пункт B. Решение
+source_string = str
+def remove_last_em(s):
+    s = input('Введите строку с восклицательным знаком или нажмите ввод: ') or '!!!test!!!'
+    if s == '!!!test!!!': 
+        print('Тестовый исходник: !!!test!!!')
+    s = s[:-1]
+    return s
+print('Очищенная строка:', remove_last_em(source_string))
+
+# Пункт C. Решение
+source_string = str
+def remove_word_with_one_em(s):
+    s = input('Введите строку, содержащую слова как с восклицательным знаком так и без. Если лень, нажмите ввод: ') or 'раз! два!! три!!! !четыре!!! раз! два!!'
+    if s == 'раз! два!! три!!! !четыре!!! раз! два!!': 
+        print('Тестовый исходник: Hi! !Hi! Hi')   
+        # s = s[:-1]
+    spisok = s.split()
+    print('исходный список: ', spisok)
+    n = 0
+    for p in spisok:
+        a = len(p)
+        # print('начальная длина строчного элемента', n, ': ', a)
+        p = p.replace('!', '')
+        b = len(p)
+        # print('итоговая длина строчного элемента', n, ': ', b)
+        if a == b + 1:
+            spisok.pop(n)
+        n += 1
+    # print('spisok=', spisok)
+    s = ' '.join(spisok)
+    return s
+print('Очищенная строка:', remove_word_with_one_em(source_string))
